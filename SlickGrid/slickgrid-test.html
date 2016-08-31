@@ -4,43 +4,27 @@
 		<title>SlickGrid Test</title>
 		<link rel="stylesheet" href="slick.grid.css" type="text/css"/>
 		<link rel="stylesheet" href="jquery-ui.min.css" type="text/css"/>
+		<link rel="stylesheet" href="style.css" type="text/css"/>
 	</head>
 	<body>
+		<div>
+			<button id="all">All</button><button id="active">Active</button><button id="inactive">Inactive</button>
+		</div>
 		<table width="100%">
 			<tr>
 				<td valign="top" width="50%">
-					<div id="empGrid" style="width:600px;height:500px;"></div>
+					<div id="empGrid" style="width:1000px;height:500px;"></div>
 				</td>
 			</tr>
 		</table>
 		<script src="jquery-1.7.min.js"></script>
+		<script src="jquery-ui.min.js"></script>
 		<script src="jquery.event.drag.js"></script>
 		<script src="slick.core.js"></script>
+		<script src="slick.editors.js"></script>
+		<script src="slick.dataview.js"></script>
+		<script src="slick.rowselectionmodel.js"></script>	
 		<script src="slick.grid.js"></script>
-		<script>
-			var grid;
-			var cols = [
-					{id: "EmpId", name: "EmpId", field: "EmpId" },
-					{id: "EmpName", name: "EmpName", field: "EmpName" },
-					{id: "DOJ", name: "DOJ", field: "DOJ" },
-					{id: "Designation", name: "Designation", field: "Designation" },
-					{id: "Contact", name: "Contact", field: "Contact" }
-				];
-				
-			var options = {
-				enableCellNavigation: true,
-				enableColumnReorder: false
-			};
-			$(function (){
-				
-				var data = [
-					{EmpId:1, EmpName:"Name1", DOJ:"2012-04-23", Designation:"Programmer Analyst", Contact:123456789},
-					{EmpId:3, EmpName:"Name2", DOJ:"2012-04-23", Designation:"Programmer Analyst", Contact:123456789},
-					{EmpId:2, EmpName:"Name3", DOJ:"2012-04-23", Designation:"Programmer Analyst", Contact:123456789}
-				];
-				grid= new Slick.Grid("#empGrid", data, cols, options);
-			});
-			 
-		</script>
+		<script src="main.js"></script>
 	</body>
 </html>
